@@ -61,6 +61,26 @@
   catch{preview.focus();preview.select();copyStatus.textContent='Bitte kopieren Sie den markierten Text.';enquiryStatus.textContent='Der Text ist markiert. Sie können ihn manuell kopieren.';}
  });
 
+ // Native touch scrolling; pointer drag adds the same movement for a mouse.
+ const gallery=document.querySelector('.experience-gallery');
+ let galleryDrag=null;
+ gallery.addEventListener('pointerdown',event=>{
+  if(event.pointerType!=='mouse'||event.button!==0)return;
+  galleryDrag={id:event.pointerId,startX:event.clientX,startScroll:gallery.scrollLeft,moved:false};
+ });
+ gallery.addEventListener('pointermove',event=>{
+  if(!galleryDrag||event.pointerId!==galleryDrag.id)return;
+  const distance=event.clientX-galleryDrag.startX;
+  if(!galleryDrag.moved&&Math.abs(distance)<6)return;
+  if(!galleryDrag.moved){galleryDrag.moved=true;gallery.setPointerCapture(event.pointerId);gallery.classList.add('is-dragging');}
+  gallery.scrollLeft=galleryDrag.startScroll-distance;
+ });
+ function endGalleryDrag(){galleryDrag=null;gallery.classList.remove('is-dragging');}
+ gallery.addEventListener('pointerup',endGalleryDrag);
+ gallery.addEventListener('pointercancel',endGalleryDrag);
+ gallery.addEventListener('lostpointercapture',endGalleryDrag);
+ gallery.addEventListener('pointerleave',()=>{if(galleryDrag&&!galleryDrag.moved)endGalleryDrag();});
+
  document.querySelectorAll('[data-dialog]').forEach(button=>button.addEventListener('click',()=>{const dialog=document.getElementById(button.dataset.dialog);dialog.showModal();}));
  document.querySelectorAll('dialog').forEach(dialog=>{
   dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
