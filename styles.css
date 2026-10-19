@@ -33,19 +33,19 @@
 
 /* Professional experience, with each brand tied to its actual role. */
 .experience-band{background:#f0e7e4;border-top:1px solid #342b3010;border-bottom:1px solid #342b3010}
-.experience-band-layout{display:grid;grid-template-columns:1fr 2.1fr;align-items:center;gap:5vw;padding-top:32px;padding-bottom:32px}
+.experience-band-layout{display:grid;grid-template-columns:.8fr 2.4fr;align-items:center;gap:4vw;padding-top:38px;padding-bottom:38px}
 .experience-intro>.eyebrow{font-size:9px;letter-spacing:.13em;color:var(--muted);margin-bottom:13px}
 .experience-intro>p:last-child{font-family:var(--serif);font-size:20px;line-height:1.5;letter-spacing:-.03em}
 .experience-intro em{color:var(--deep)}
 .reference-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;align-items:stretch}
-.reference-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:17px;min-height:100px;padding:8px 4px;color:var(--muted)}
+.reference-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;min-height:132px;padding:8px 4px;color:var(--muted)}
 a.reference-item{border-radius:3px;transition:background .2s,box-shadow .2s}
 a.reference-item:hover{background:#fff7;box-shadow:0 5px 16px #49303d0b}
-.reference-item img{width:140px;height:48px;object-fit:contain;filter:brightness(0);opacity:.72}
-.reference-triumph img{width:142px}
-.reference-sat1 img{width:104px}
-.reference-europapark img{width:145px}
-.reference-item>span{min-height:33px;font-size:11px;letter-spacing:.035em;text-align:center;line-height:1.5}
+.reference-item img{width:200px;height:72px;object-fit:contain;filter:brightness(0);opacity:.86}
+.reference-triumph img{width:210px}
+.reference-sat1 img{width:134px}
+.reference-europapark img{width:210px;height:76px}
+.reference-item>span{min-height:36px;font-size:12px;letter-spacing:.035em;text-align:center;line-height:1.5}
 .audience-section{border-top:0;padding-top:78px;padding-bottom:80px;row-gap:40px}
 .occasion-list{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
 .occasion{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:26px 28px 25px;background:#fffaf6;border:1px solid #342b3015;box-shadow:0 5px 15px #49303d07;transition:box-shadow .25s,transform .25s,border-color .25s}
@@ -91,9 +91,9 @@ a.reference-item:hover{background:#fff7;box-shadow:0 5px 16px #49303d0b}
  .experience-band-layout{grid-template-columns:1fr;gap:22px;padding-top:28px;padding-bottom:25px}
  .experience-intro>p:last-child{font-size:20px}.experience-intro>p:last-child br{display:none}.experience-intro>p:last-child br:after{content:' '}
  .experience-intro>.eyebrow{font-size:9px;margin-bottom:10px}
- .reference-list{gap:10px}.reference-item{min-height:89px;gap:13px;padding:5px 0}
- .reference-item img{max-width:100%;height:39px}.reference-triumph img{width:103px}.reference-sat1 img{width:75px}.reference-europapark img{width:108px}
- .reference-item>span{font-size:10px;letter-spacing:0;max-width:108px}
+ .reference-list{display:flex;gap:18px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#bb9aa5 transparent;padding-bottom:12px}.reference-item{flex:0 0 160px;min-width:0;min-height:121px;gap:17px;padding:5px 6px;scroll-snap-align:start}
+ .reference-item img{max-width:100%;height:62px}.reference-triumph img{width:148px}.reference-sat1 img{width:100px}.reference-europapark img{width:148px;height:62px}
+ .reference-item>span{font-size:11px;letter-spacing:.015em;max-width:148px}
  .audience-section{padding-top:53px;padding-bottom:53px;row-gap:28px}
  .occasion-list{grid-template-columns:1fr;gap:15px;margin-top:5px}
  .occasion{padding:22px 23px;display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:14px}
@@ -108,5 +108,7 @@ a.reference-item:hover{background:#fff7;box-shadow:0 5px 16px #49303d0b}
  .experience-bridge{display:block;margin-top:23px}.experience-bridge p{font-size:15px}.experience-bridge .inline-link{margin-top:16px}
  .faq-section{grid-template-columns:1fr;gap:30px;padding-top:0;padding-bottom:55px}.faq-item summary{font-size:17px;gap:20px;padding:21px 0}.faq-item>p{padding-right:0;font-size:16px}
 }
-@media(max-width:370px){.reference-list{gap:11px}.reference-item>span{font-size:9px}.reference-triumph img{width:80px}.reference-sat1 img{width:65px}.reference-europapark img{width:90px}.experience-intro>p:last-child{font-size:18px}.occasion{padding:20px 18px;column-gap:8px}.experience-card h3{font-size:22px}}
+@media(max-width:370px){.reference-list{gap:12px}.reference-item{flex-basis:145px}.reference-item>span{font-size:10px}.reference-triumph img{width:133px}.reference-sat1 img{width:90px}.reference-europapark img{width:133px}.experience-intro>p:last-child{font-size:18px}.occasion{padding:20px 18px;column-gap:8px}.experience-card h3{font-size:22px}}
 @media(prefers-reduced-motion:reduce){.occasion:hover{transform:none}}
+
+.reference-list:focus-visible{outline:2px solid var(--rose);outline-offset:5px}
