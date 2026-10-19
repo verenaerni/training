@@ -47,7 +47,7 @@
   lines.push('',message,'','Ich freue mich über eine Rückmeldung.','','Freundliche Grüße');
   const text=lines.join('\n');
   preview.value=text;
-  emailLink.href='mailto:Verena.Erni@gmx.de?subject='+encodeURIComponent('Trainingsanfrage – '+topic.value)+'&body='+encodeURIComponent(text);
+  emailLink.href='mailto:verena.erni@gmx.de?subject='+encodeURIComponent('Trainingsanfrage – '+topic.value)+'&body='+encodeURIComponent(text);
  }
  form.addEventListener('submit',event=>{
   event.preventDefault();
@@ -66,5 +66,4 @@
   dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',event=>{if(event.target===dialog){const bounds=dialog.getBoundingClientRect();if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)dialog.close();}});
  });
- document.getElementById('year').textContent=String(new Date().getFullYear());
 })();
