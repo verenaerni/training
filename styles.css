@@ -122,3 +122,10 @@
 .legal-developer .sos-inline-logo{flex:none;width:24px;height:24px;margin:0}
 .legal-developer span{min-width:0}
 .sos-name{white-space:nowrap}
+
+/* Keep the mobile headline and professional roles on deliberate, separate lines. */
+@media(max-width:700px){
+ .hero h1 em{display:block}
+ .experience-intro>p:last-child br{display:initial}
+ .experience-intro>p:last-child br:after{content:none}
+}
