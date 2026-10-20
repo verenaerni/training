@@ -133,3 +133,6 @@
 .audience-section h2{text-wrap:balance}
 .tv-separator{display:none}
 @media(max-width:700px){.tv-separator{display:inline}}
+
+/* Long photo-credit handles must wrap inside narrow legal dialogs. */
+dialog p,dialog a{overflow-wrap:anywhere}
