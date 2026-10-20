@@ -47,7 +47,7 @@
   lines.push('',message,'','Ich freue mich über eine Rückmeldung.','','Freundliche Grüße');
   const text=lines.join('\n');
   preview.value=text;
-  emailLink.href='mailto:verena.erni@gmx.de?subject='+encodeURIComponent('Trainingsanfrage – '+topic.value)+'&body='+encodeURIComponent(text);
+  emailLink.href='mailto:mail@verenaerni.com?subject='+encodeURIComponent('Anfrage – '+topic.value)+'&body='+encodeURIComponent(text);
  }
  form.addEventListener('submit',event=>{
   event.preventDefault();

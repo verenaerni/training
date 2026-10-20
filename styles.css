@@ -37,15 +37,6 @@
 .experience-intro>.eyebrow{font-size:9px;letter-spacing:.13em;color:var(--muted);margin-bottom:13px}
 .experience-intro>p:last-child{font-family:var(--serif);font-size:20px;line-height:1.5;letter-spacing:-.03em}
 .experience-intro em{color:var(--deep)}
-.reference-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;align-items:stretch}
-.reference-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;min-height:132px;padding:8px 4px;color:var(--muted)}
-a.reference-item{border-radius:3px;transition:background .2s,box-shadow .2s}
-a.reference-item:hover{background:#fff7;box-shadow:0 5px 16px #49303d0b}
-.reference-item img{width:200px;height:72px;object-fit:contain;filter:brightness(0);opacity:.86}
-.reference-triumph img{width:210px}
-.reference-sat1 img{width:134px}
-.reference-europapark img{width:210px;height:76px}
-.reference-item>span{min-height:36px;font-size:12px;letter-spacing:.035em;text-align:center;line-height:1.5}
 .audience-section{border-top:0;padding-top:78px;padding-bottom:80px;row-gap:40px}
 .occasion-list{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
 .occasion{position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:26px 28px 25px;background:#fffaf6;border:1px solid #342b3015;box-shadow:0 5px 15px #49303d07;transition:box-shadow .25s,transform .25s,border-color .25s}
@@ -86,14 +77,11 @@ a.reference-item:hover{background:#fff7;box-shadow:0 5px 16px #49303d0b}
 .faq-item summary:hover .detail-indicator{background:var(--blush)}
 .faq-item>p{padding:0 50px 24px 0;font-size:16px;color:var(--muted);line-height:1.8}
 @media(min-width:821px) and (max-width:1050px){.site-header nav{gap:18px;font-size:13px}.site-header .brand{gap:10px}.site-header .brand>span{font-size:18px}}
-@media(max-width:1000px){.experience-band-layout{grid-template-columns:.9fr 2.1fr;gap:3vw}.reference-list{gap:15px}.reference-item img{max-width:90%}.experience-intro>p:last-child{font-size:18px}.occasion{padding:22px}.occasion h3{font-size:23px}.occasion p{font-size:15px}.experience-heading>p{max-width:290px}.experience-bridge{gap:30px}.faq-section{gap:6vw}}
+@media(max-width:1000px){.experience-band-layout{grid-template-columns:.9fr 2.1fr;gap:3vw}.experience-intro>p:last-child{font-size:18px}.occasion{padding:22px}.occasion h3{font-size:23px}.occasion p{font-size:15px}.experience-heading>p{max-width:290px}.experience-bridge{gap:30px}.faq-section{gap:6vw}}
 @media(max-width:700px){
  .experience-band-layout{grid-template-columns:1fr;gap:22px;padding-top:28px;padding-bottom:25px}
  .experience-intro>p:last-child{font-size:20px}.experience-intro>p:last-child br{display:none}.experience-intro>p:last-child br:after{content:' '}
  .experience-intro>.eyebrow{font-size:9px;margin-bottom:10px}
- .reference-list{display:flex;gap:18px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#bb9aa5 transparent;padding-bottom:12px}.reference-item{flex:0 0 160px;min-width:0;min-height:121px;gap:17px;padding:5px 6px;scroll-snap-align:start}
- .reference-item img{max-width:100%;height:62px}.reference-triumph img{width:148px}.reference-sat1 img{width:100px}.reference-europapark img{width:148px;height:62px}
- .reference-item>span{font-size:11px;letter-spacing:.015em;max-width:148px}
  .audience-section{padding-top:53px;padding-bottom:53px;row-gap:28px}
  .occasion-list{grid-template-columns:1fr;gap:15px;margin-top:5px}
  .occasion{padding:22px 23px;display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:14px}
@@ -108,7 +96,19 @@ a.reference-item:hover{background:#fff7;box-shadow:0 5px 16px #49303d0b}
  .experience-bridge{display:block;margin-top:23px}.experience-bridge p{font-size:15px}.experience-bridge .inline-link{margin-top:16px}
  .faq-section{grid-template-columns:1fr;gap:30px;padding-top:0;padding-bottom:55px}.faq-item summary{font-size:17px;gap:20px;padding:21px 0}.faq-item>p{padding-right:0;font-size:16px}
 }
-@media(max-width:370px){.reference-list{gap:12px}.reference-item{flex-basis:145px}.reference-item>span{font-size:10px}.reference-triumph img{width:133px}.reference-sat1 img{width:90px}.reference-europapark img{width:133px}.experience-intro>p:last-child{font-size:18px}.occasion{padding:20px 18px;column-gap:8px}.experience-card h3{font-size:22px}}
+@media(max-width:370px){.experience-intro>p:last-child{font-size:18px}.occasion{padding:20px 18px;column-gap:8px}.experience-card h3{font-size:22px}}
 @media(prefers-reduced-motion:reduce){.occasion:hover{transform:none}}
 
-.reference-list:focus-visible{outline:2px solid var(--rose);outline-offset:5px}
+/* Feedback 20.10: practical expertise replaces the brand-logo strip. */
+.hero-expertise{font-size:14px;line-height:1.65;font-weight:600;color:var(--deep);margin-top:18px;max-width:470px}
+.expertise-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin:0;min-width:0}
+.expertise-list>div{padding:8px 0 8px 24px;border-left:1px solid #342b3025;min-width:0}
+.expertise-list dt{font-family:var(--serif);font-size:clamp(20px,2.1vw,30px);line-height:1.45;letter-spacing:-.045em;color:var(--ink)}
+.expertise-list dd{font-size:12px;line-height:1.7;letter-spacing:.015em;color:var(--muted);margin:14px 0 0}
+.expertise-list .expertise-tv dt{font-family:var(--sans);font-size:19px;font-weight:500;letter-spacing:0;line-height:1.55}
+.about-copy .moderation-offer{padding-top:18px;border-top:1px solid var(--line);margin-top:24px!important}
+.moderation-offer strong{font-weight:600;color:var(--deep)}
+@media(min-width:701px) and (max-height:820px){.hero-expertise{font-size:13px;line-height:1.6;margin-top:14px}.hero-description{margin-top:15px}}
+@media(max-width:1000px){.expertise-list{gap:16px}.expertise-list>div{padding-left:16px}.expertise-list dt{font-size:22px}.expertise-list .expertise-tv dt{font-size:17px}.expertise-list dd{font-size:11px}}
+@media(max-width:700px){.hero-expertise{font-size:14px;line-height:1.65;margin-top:19px}.expertise-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 20px}.expertise-list>div{border-left:0;padding:0}.expertise-list dt{font-size:25px}.expertise-list dd{font-size:12px;margin-top:10px}.expertise-list .expertise-tv{grid-column:1/-1;border-top:1px solid #342b3025;padding-top:18px}.expertise-list .expertise-tv dt{font-size:20px}.expertise-tv dt br{display:none}.expertise-tv dt br:after{content:' '}.expertise-list .expertise-tv dd{margin-top:7px}}
+@media(max-width:370px){.hero-expertise{font-size:13px}.expertise-list{gap:21px 17px}.expertise-list dt{font-size:21px}.expertise-list dd{font-size:11px}.expertise-list .expertise-tv dt{font-size:18px}}
