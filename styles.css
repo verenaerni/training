@@ -121,3 +121,4 @@
 .legal-developer{display:inline-flex;align-items:center;gap:10px;max-width:100%}
 .legal-developer .sos-inline-logo{flex:none;width:24px;height:24px;margin:0}
 .legal-developer span{min-width:0}
+.sos-name{white-space:nowrap}
