@@ -112,3 +112,12 @@
 @media(max-width:1000px){.expertise-list{gap:16px}.expertise-list>div{padding-left:16px}.expertise-list dt{font-size:22px}.expertise-list .expertise-tv dt{font-size:17px}.expertise-list dd{font-size:11px}}
 @media(max-width:700px){.hero-expertise{font-size:14px;line-height:1.65;margin-top:19px}.expertise-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 20px}.expertise-list>div{border-left:0;padding:0}.expertise-list dt{font-size:25px}.expertise-list dd{font-size:12px;margin-top:10px}.expertise-list .expertise-tv{grid-column:1/-1;border-top:1px solid #342b3025;padding-top:18px}.expertise-list .expertise-tv dt{font-size:20px}.expertise-tv dt br{display:none}.expertise-tv dt br:after{content:' '}.expertise-list .expertise-tv dd{margin-top:7px}}
 @media(max-width:370px){.hero-expertise{font-size:13px}.expertise-list{gap:21px 17px}.expertise-list dt{font-size:21px}.expertise-list dd{font-size:11px}.expertise-list .expertise-tv dt{font-size:18px}}
+
+/* Give the team note the full row; keep the sentence ending together on narrow screens. */
+.training-note{display:block}
+.training-note p:first-child{max-width:none}
+.training-note p:last-child{margin-top:8px}
+.sos-inline-logo{display:inline-block;width:20px;height:20px;object-fit:contain;vertical-align:-.3em;margin-right:7px;opacity:.75}
+.legal-developer{display:inline-flex;align-items:center;gap:10px;max-width:100%}
+.legal-developer .sos-inline-logo{flex:none;width:24px;height:24px;margin:0}
+.legal-developer span{min-width:0}
